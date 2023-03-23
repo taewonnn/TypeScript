@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {useState} from "react";
 
 interface ContainerProps {
   bgColor : string;
@@ -21,6 +22,18 @@ interface CircleProps {
 }
 
 export default function Circle ({bgColor, borderColor, text = 'default text'}: CircleProps) {
+
+  const [counter, setCounter] = useState(1);
+  // 초깃값에 number가 들어갔기에 setCounter안에 숫자가 와야한다고 인식, 문자열을 넣으면 타입이 잘못되었다고 알려줌
+  // setCounter('hello')
+
+  // number 이외에 string 모두 적용하고 싶다면?!  => <string|number>
+  const [value, setValue] = useState<string|number>(1)
+  setValue(2)
+  setValue('hello')
+
+
+
   return (
   <Container bgColor={bgColor} borderColor={borderColor ?? 'black'}>
     {text}
