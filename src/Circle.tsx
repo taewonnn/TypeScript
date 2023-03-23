@@ -34,6 +34,7 @@ export default function Circle ({bgColor, borderColor, text = 'default text'}: C
 
 
 
+
   return (
   <Container bgColor={bgColor} borderColor={borderColor ?? 'black'}>
     {text}
