@@ -18,7 +18,6 @@ function Dummy({text, active = false}: DummyProps) {
 
 
 
-
 const Container = styled.div`
     background-color: ${props => props.theme.bgColor};
   `
