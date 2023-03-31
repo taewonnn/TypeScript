@@ -5,7 +5,8 @@ import Home from "./Home";
 import Root from "../Root";
 import NotFound from "./NotFound";
 import ErrorComponent from "../components/ErrorComponent";
-import User from "./user";
+import User from "../users/user";
+import Followers from "../users/Followers";
 
 
 // createBrowserRouter 방식
@@ -26,7 +27,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'users/:userId',
-        element: <User />
+        element: <User />,
+        children: [
+          {
+            path: 'followers',
+            element: <Followers />
+          }
+        ]
       }
     ],
     errorElement: <NotFound />
