@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ESNext", // js 버전
     "module": "ESNext",
+    "moduleResolution": "bundler", // 모듈 해석 방식 설정 (ESNext 모듈과 함께 사용)
     "outDir": "dist", // js 컴파일한 파일을 모아두는 경로
     "strict": true, // 모든 타입 체크를 활성화(엄격하게 모든 타입에 대해 검사)
     "moduleDetection": "force", // 모듈 감지 활성화(모듈 감지 활성화)
